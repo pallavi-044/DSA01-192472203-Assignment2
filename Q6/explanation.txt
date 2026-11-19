@@ -1,0 +1,8 @@
+Friend function: A non-member function that can access private class members when declared as a friend.
+Member function: Called using an object and can directly access its private data.
+Inline function: Requests that the compiler consider expanding the function at the call site. The compiler decides whether to inline it.
+Encapsulation: Keeping hours and minutes private protects the internal representation.
+Time complexity: Both time calculations take O(1).
+Space complexity: Both use O(1) extra space.
+Performance: Compare your measured timings at -O0 and -O2. Compiler optimization may reduce the difference.
+Deployment decision: Keep friend functions when an operation naturally compares two objects equally. Use member functions when the operation clearly belongs to one object.
