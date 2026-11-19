@@ -1,0 +1,6 @@
+EXAMINATION MARKS REGISTER
+Original highest mark: 92
+After moderation: 94
+Using const reference: 94
+Using value copy: 94
+Vector capacity changed: YES

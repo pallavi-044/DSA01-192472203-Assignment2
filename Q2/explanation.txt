@@ -1,0 +1,47 @@
+# Q2 – RETURN BY REFERENCE AND ITS DANGERS
+
+1. RETURN BY REFERENCE
+
+The highestMark() function returns a reference to the highest element in the marks array. This allows the caller to directly modify the original array element.
+
+2. RETURNING A LOCAL VARIABLE
+
+Returning a reference to a local variable is dangerous because the variable is destroyed when the function ends. The returned reference becomes dangling, and accessing it causes undefined behaviour.
+
+3. REFERENCE VS CONST REFERENCE VS COPY
+
+Reference (int&): Allows modification of the original variable.
+
+Const Reference (const int&): Allows reading without modifying the original variable.
+
+Value (int): Returns an independent copy of the value.
+
+4. VECTOR REALLOCATION
+
+When a vector grows beyond its allocated capacity, it may allocate new memory and move its elements. Existing references, pointers and iterators to its elements are invalidated.
+
+5. ALTERNATIVE USING INDEX
+
+An integer index can identify the highest mark. The caller can modify the element using marks[index].
+
+6. ALTERNATIVE USING POINTER
+
+An int pointer can point to the highest array element and modify it using the dereference operator.
+
+7. COMPLEXITY ANALYSIS
+
+Finding the highest mark:
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Returning a reference:
+Time Complexity: O(1) after finding the element.
+Extra Space: O(1).
+
+Returning by copy:
+Time Complexity: O(1) after finding the element.
+Extra Space: O(1).
+
+8. RESULT
+
+The highest mark was successfully modified using return by reference. The differences between reference, const reference and value were demonstrated.
