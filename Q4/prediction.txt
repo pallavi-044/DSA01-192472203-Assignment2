@@ -1,0 +1,14 @@
+SAVINGS ACCOUNT MINI STATEMENT
+Account Number: 1001
+Recent Transactions:
+Deposit: Rs. 300.00
+Withdrawal: Rs. 100.00
+Deposit: Rs. 400.00
+Withdrawal: Rs. 50.00
+Deposit: Rs. 250.00
+Withdrawal: Rs. 150.00
+Deposit: Rs. 600.00
+Withdrawal: Rs. 300.00
+Deposit: Rs. 700.00
+Withdrawal: Rs. 100.00
+Final Balance: Rs. 2850.00

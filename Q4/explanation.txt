@@ -1,0 +1,52 @@
+Q4 – SAVINGS ACCOUNT MINI STATEMENT
+
+1. CLASS SPECIFICATION
+
+The SavingsAccount class contains private data members:
+- Account number
+- Account balance
+- Array of 10 transactions
+- Transaction count
+
+Public member functions:
+- deposit()
+- withdraw()
+- miniStatement()
+
+2. WHY IS THE ARRAY PRIVATE?
+
+The array is private to protect account information and prevent unauthorized modifications. Transactions can only be accessed through public member functions.
+
+3. HANDLING THE 11TH TRANSACTION
+
+When the array is full, the oldest transaction is removed by shifting the remaining nine transactions to the left. The new transaction is inserted at the last position.
+
+4. CIRCULAR ARRAY
+
+A circular array uses a start index to identify the oldest transaction. New transactions overwrite the oldest entry when the array becomes full.
+
+5. DESIGN DECISION
+
+For storing the last 50 transactions, a circular buffer is preferable because it avoids shifting all existing transactions whenever a new transaction arrives.
+
+6. ALTERNATIVE USING DEQUE
+
+A std::deque can use push_back() to insert a transaction and pop_front() to remove the oldest transaction.
+
+7. COMPLEXITY ANALYSIS
+
+Fixed array with shifting:
+Insertion: O(k)
+Space: O(10)
+
+Circular buffer:
+Insertion: O(1)
+Space: O(10)
+
+Deque:
+Insertion and removal at opposite ends: O(1) amortized.
+Space: O(k)
+
+8. RESULT
+
+The SavingsAccount class was implemented successfully. Deposits, withdrawals and the mini-statement were verified. Only the latest 10 transactions are retained.
