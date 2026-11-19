@@ -1,0 +1,7 @@
+HOSTEL FEE CONCESSION SYSTEM
+Original Fee: Rs. 45000
+
+After Call by Value     : Rs. 45000
+After Call by Reference : Rs. 40500
+After Call by Pointer   : Rs. 40500
+After Return by Value   : Rs. 40500

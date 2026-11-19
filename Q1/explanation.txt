@@ -1,0 +1,57 @@
+# Q1 – CALL BY VALUE, REFERENCE AND POINTER
+
+## 1. Call by Value
+The function receives a copy of the original variable. Changes made inside the function do not affect the caller's variable.
+
+## 2. Call by Reference
+The function receives a reference to the original variable. Changes made inside the function directly affect the caller's variable.
+
+## 3. Call by Pointer
+The function receives the memory address of a variable. The dereference operator (*) is used to modify the original value.
+
+## 4. Return by Reference
+The bigger() function returns a reference to the larger variable. Therefore, bigger(a,c) = 100 directly modifies the selected variable.
+
+## 5. Default Arguments
+- show(1) uses y=5 and z=10.
+- show(1,2) uses z=10.
+- show(1,2,3) uses all supplied arguments.
+
+## 6. Why Call by Value Does Not Change the Original Fee
+Call by value creates a separate copy of the original fee. Therefore, modifications inside the function do not affect the caller's variable.
+
+## 7. Parameter Storage
+- Value: A separate local copy.
+- Reference: An alias of the original variable.
+- Pointer: Stores the memory address of the original variable.
+
+## 8. Const Reference
+A const reference is used when a function needs to access data without modifying it. It avoids unnecessary copying, especially for large objects.
+
+## 9. Design Decision
+Call by reference is suitable when the original hostel fee must be updated directly. Returning a new fee is preferable when the original value must remain unchanged.
+
+## 10. PSEUDOCODE
+
+START
+1. Initialize hostelFee = 45000.
+2. Call applyByValue(hostelFee, 10).
+3. Display hostelFee.
+4. Call applyConcession(hostelFee, 10).
+5. Display hostelFee.
+6. Call applyByPointer(&hostelFee, 10).
+7. Display hostelFee.
+8. Stop.
+
+## 11. COMPLEXITY ANALYSIS
+
+| Method | Time Complexity | Extra Space |
+| Call by Value | O(1) | O(1) |
+| Call by Reference | O(1) | O(1) |
+| Call by Pointer | O(1) | O(1) |
+| Return by Value | O(1) | O(1) |
+
+Passing a long long by value copies a small fixed-size value. Passing a large Student object by value requires copying the entire object. Reference and const reference avoid copying the object.
+
+## 12. RESULT
+The programs were successfully compiled and executed. The predicted outputs matched the actual outputs. Call by value, reference, pointer, return by reference and default arguments were verified.
