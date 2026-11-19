@@ -1,0 +1,45 @@
+# Q5 – STATIC MEMBERS AND ARRAYS OF OBJECTS
+
+1. STATIC DATA MEMBER
+
+The static variable issued is shared by all BusTicket objects. It maintains the total number of seats issued.
+
+2. STATIC MEMBER FUNCTION
+
+The count() function returns the number of issued seats. A static function cannot directly access non-static members because it does not have a this pointer.
+
+3. ARRAY OF OBJECTS
+
+The statement BusTicket trip[4] creates four objects. Each object invokes the constructor automatically.
+
+4. WAITING LIST
+
+The bus has a capacity of three seats. The fourth passenger is placed on the waiting list.
+
+5. STATIC MEMBER DEFINITION
+
+The static data member is defined outside the class using:
+
+int BusTicket::issued = 0;
+
+6. CONSTRUCTOR INSIDE A FUNCTION
+
+When ticket objects are created inside a function, the shared static counter retains its value between function calls. It is not reset when the function ends.
+
+7. ALTERNATIVE DESIGNS
+
+A global variable can maintain the counter, but it provides weaker encapsulation.
+
+A separate TicketOffice object can maintain independent counters for multiple buses.
+
+8. COMPLEXITY ANALYSIS
+
+Ticket creation: O(1)
+Seat allocation: O(1)
+Printing one ticket: O(1)
+Total for n tickets: O(n)
+Extra counter space: O(1)
+
+9. RESULT
+
+Static members and an array of objects were successfully implemented. Three seats were allocated and the fourth passenger was placed on the waiting list.
