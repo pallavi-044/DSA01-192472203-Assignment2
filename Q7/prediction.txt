@@ -1,0 +1,10 @@
+The redesigned circular array will retain only the latest 10 transactions.
+
+The final balance will be Rs. 2850.
+
+The first two transactions will be discarded.
+The displayed transactions will begin with Deposit Rs. 300
+and end with Withdrawal Rs. 100.
+
+The circular array will insert transactions in O(1) time
+without shifting existing elements.

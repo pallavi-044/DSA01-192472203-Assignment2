@@ -1,0 +1,7 @@
+Feature	Original fixed array	Redesigned circular array
+Storage	Array of 10	Circular array of 10
+Insertion	O(n) when full	O(1)
+Extra space	O(1)	O(1)
+Shifting	Required	Not required
+Old transactions	Discarded	Overwritten
+Output order	Oldest to newest	Oldest to newest

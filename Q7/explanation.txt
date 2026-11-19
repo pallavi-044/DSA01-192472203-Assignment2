@@ -1,0 +1,23 @@
+A. Diagnose the Limitation
+
+The original SavingsAccount program uses a fixed array to store the last 10 transactions. When the array becomes full, inserting a new transaction requires shifting existing elements. This increases insertion time to O(n).
+
+B. Design Objective
+
+To reduce transaction insertion time from O(n) to O(1), while retaining only the latest 10 transactions.
+
+C. Revised Design
+
+The redesigned program uses a circular array with a next index. Each new transaction is inserted at the current index. The index moves forward using modulo 10. When the array is full, the oldest transaction is overwritten.
+
+D. Prediction
+
+The circular array should eliminate shifting and maintain constant-time insertion. The final balance and transaction history should remain identical to the original program.
+
+E. Implementation and Validation
+
+Both programs execute the same deposit and withdrawal operations. The final balance is Rs. 2850, and both display the latest 10 transactions in chronological order.
+
+F. Final Decision
+
+The circular array is more efficient for frequently updated transaction histories because it avoids shifting. It uses the same fixed storage capacity and provides O(1) insertion. The original array is simpler to understand, but the circular array is preferable when transactions are added frequently.
