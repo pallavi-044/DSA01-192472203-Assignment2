@@ -1,0 +1,60 @@
+# Q3 – DEFAULT ARGUMENTS AND FUNCTION OVERLOADING
+
+## 1. Ambiguous Function Call
+
+When multiple overloaded functions can accept the same arguments, the compiler may report an ambiguous function call.
+
+The original charge(double weight) and charge(double weight, bool express = false, bool insured = false) conflict because both can accept a single double argument.
+
+## 2. Function Overloading
+
+Function overloading allows multiple functions to have the same name but different parameter types or numbers.
+
+This program supports:
+- Integer weight in grams.
+- Double weight in kilograms.
+- Parcel objects.
+
+## 3. Default Arguments
+
+Default arguments provide automatic values when optional parameters are omitted.
+
+Express and insurance are false by default.
+
+Default arguments must be specified from right to left.
+
+## 4. Function Selection
+
+- charge(500): Integer overload, exact match.
+- charge(2): Integer overload, exact match.
+- charge(2.0f): Double overload, float-to-double promotion.
+- charge(1.5): Double overload, exact match.
+- charge(2.0, true): Double overload, exact match.
+- charge(Parcel): Parcel overload, exact match.
+
+## 5. Overload Resolution
+
+The compiler generally prefers:
+1. Exact match.
+2. Promotion.
+3. Standard conversion.
+
+Overload resolution happens during compilation and introduces no runtime overload-selection cost.
+
+## 6. Alternative Design
+
+An alternative is to use a single Parcel structure containing weight, express delivery and insurance details.
+
+This reduces the number of overloaded functions but requires creating and passing a Parcel object.
+
+## 7. Complexity Analysis
+
+Function execution: O(1).
+
+Overload resolution: Compile-time operation.
+
+Space complexity: O(1) for the small parameter values and Parcel object.
+
+## 8. RESULT
+
+Function overloading and default arguments were implemented successfully. Six function calls were tested with different argument types and the expected overloads were selected.
